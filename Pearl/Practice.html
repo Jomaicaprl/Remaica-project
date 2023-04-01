@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Our Portfolio</title>
+    <link rel="Stylesheet" href="Practice.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Remaica.png" class="logo">
+                <ul>
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Services">Services</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>College Student</p>
+                <h1>Hi, I'm <span>Jomaica Pearl</span><br>From Philippines</h1>
+            </div>
+        </div>
+</div>
+<!------------About------------>
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="About-col-1">
+                <img src="Images/Pearl2.jpg">
+            </div>
+            <div class="About-col-2">
+                <h1 class="sub-title">About Us</h1>
+                <p>I am Jomaica Pearl Embang, 20 years old. I'm Currently Studying HTML and 2nd year College Student at Don Honorio Ventura State University in Pampanga, Philippines.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('Experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Reuel Lorico</span><br>
+                            Designing Web/App<br>
+                            Public Speaking<br>
+                            Leadership</li>
+                        <br>
+                        <li><span>Jomaica Pearl Embang</span><br>
+                            Designing Web/App<br>
+                            Freelancer (Photographer)<br>
+                            Video/Photo Editing<br></li> 
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>Reuel Lorico</span><br>
+                            College: Don Honorio Ventura State University<br></li>
+                        <br>
+                        <li><span>Jomaica Pearl Embang</span><br>
+                            College: Don Honorio Ventura State University<br>
+                            ELEM-HS-SH: Christian Vision Academy<br></li> 
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="Experience">
+                    <ul>
+                        <li><span>Reuel Lorico</span><br>
+                            Part Time: Video/Photo Editing<br></li>
+                        <br>
+                        <li><span>Jomaica Pearl Embang</span><br>
+                            Part Time: Live Streaming<br>
+                            Video/Photo Editing<br>
+                            Freelancer (Photographer)<br></li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Services------------>
+<div id="Services">
+    <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Video/Photo Editing</h2>
+                <p>lagyan mo na lang to wey la nakong maisip hahahah</p>
+                <a href="#"> Learn more</a>
+            </div>
+            <div>
+                <h2>Designing Web/App</h2>
+                <p>lagyan mo na lang to wey la nakong maisip hahahah</p>
+                <a href="#"> Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Contact------------>
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> jomaicaembang1230@gmail.com</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 09367012149</p>
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> Loricoreuel@gmail.com</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 09367012149</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Jomaicaprl/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/jomaicaprl/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/jomaicaprl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://web.telegram.org/z/"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">Annyeong</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-tab");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyEIhtPW8HUlfdip33xBEWuVpGCJxDSiBtg3PrxasCa5b_Zahyq1pPMXjuTKgS-KwWp-g/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
